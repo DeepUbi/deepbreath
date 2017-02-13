@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3608D6A51E523E9100BAAAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608D6A41E523E9100BAAAD3 /* AppDelegate.swift */; };
+		3608D6A71E523E9100BAAAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608D6A61E523E9100BAAAD3 /* ViewController.swift */; };
+		3608D6AA1E523E9100BAAAD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3608D6A81E523E9100BAAAD3 /* Main.storyboard */; };
+		3608D6AC1E523E9100BAAAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3608D6AB1E523E9100BAAAD3 /* Assets.xcassets */; };
+		3608D6AF1E523E9100BAAAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3608D6AD1E523E9100BAAAD3 /* LaunchScreen.storyboard */; };
+		3608D6BA1E523E9100BAAAD3 /* DeepBreathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608D6B91E523E9100BAAAD3 /* DeepBreathTests.swift */; };
+		3608D6C51E523E9100BAAAD3 /* DeepBreathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3608D6C41E523E9100BAAAD3 /* DeepBreathUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3608D6B61E523E9100BAAAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3608D6991E523E9100BAAAD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3608D6A01E523E9100BAAAD3;
+			remoteInfo = DeepBreath;
+		};
+		3608D6C11E523E9100BAAAD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3608D6991E523E9100BAAAD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3608D6A01E523E9100BAAAD3;
+			remoteInfo = DeepBreath;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3608D6A11E523E9100BAAAD3 /* DeepBreath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepBreath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3608D6A41E523E9100BAAAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3608D6A61E523E9100BAAAD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3608D6A91E523E9100BAAAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3608D6AB1E523E9100BAAAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3608D6AE1E523E9100BAAAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3608D6B01E523E9100BAAAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3608D6B51E523E9100BAAAD3 /* DeepBreathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepBreathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3608D6B91E523E9100BAAAD3 /* DeepBreathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathTests.swift; sourceTree = "<group>"; };
+		3608D6BB1E523E9100BAAAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3608D6C01E523E9100BAAAD3 /* DeepBreathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepBreathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3608D6C41E523E9100BAAAD3 /* DeepBreathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepBreathUITests.swift; sourceTree = "<group>"; };
+		3608D6C61E523E9100BAAAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3608D69E1E523E9100BAAAD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3608D6B21E523E9100BAAAD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3608D6BD1E523E9100BAAAD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3608D6981E523E9100BAAAD3 = {
+			isa = PBXGroup;
+			children = (
+				3608D6A31E523E9100BAAAD3 /* DeepBreath */,
+				3608D6B81E523E9100BAAAD3 /* DeepBreathTests */,
+				3608D6C31E523E9100BAAAD3 /* DeepBreathUITests */,
+				3608D6A21E523E9100BAAAD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3608D6A21E523E9100BAAAD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3608D6A11E523E9100BAAAD3 /* DeepBreath.app */,
+				3608D6B51E523E9100BAAAD3 /* DeepBreathTests.xctest */,
+				3608D6C01E523E9100BAAAD3 /* DeepBreathUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3608D6A31E523E9100BAAAD3 /* DeepBreath */ = {
+			isa = PBXGroup;
+			children = (
+				3608D6A41E523E9100BAAAD3 /* AppDelegate.swift */,
+				3608D6A61E523E9100BAAAD3 /* ViewController.swift */,
+				3608D6A81E523E9100BAAAD3 /* Main.storyboard */,
+				3608D6AB1E523E9100BAAAD3 /* Assets.xcassets */,
+				3608D6AD1E523E9100BAAAD3 /* LaunchScreen.storyboard */,
+				3608D6B01E523E9100BAAAD3 /* Info.plist */,
+			);
+			path = DeepBreath;
+			sourceTree = "<group>";
+		};
+		3608D6B81E523E9100BAAAD3 /* DeepBreathTests */ = {
+			isa = PBXGroup;
+			children = (
+				3608D6B91E523E9100BAAAD3 /* DeepBreathTests.swift */,
+				3608D6BB1E523E9100BAAAD3 /* Info.plist */,
+			);
+			path = DeepBreathTests;
+			sourceTree = "<group>";
+		};
+		3608D6C31E523E9100BAAAD3 /* DeepBreathUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3608D6C41E523E9100BAAAD3 /* DeepBreathUITests.swift */,
+				3608D6C61E523E9100BAAAD3 /* Info.plist */,
+			);
+			path = DeepBreathUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3608D6A01E523E9100BAAAD3 /* DeepBreath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3608D6C91E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreath" */;
+			buildPhases = (
+				3608D69D1E523E9100BAAAD3 /* Sources */,
+				3608D69E1E523E9100BAAAD3 /* Frameworks */,
+				3608D69F1E523E9100BAAAD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepBreath;
+			productName = DeepBreath;
+			productReference = 3608D6A11E523E9100BAAAD3 /* DeepBreath.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3608D6B41E523E9100BAAAD3 /* DeepBreathTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3608D6CC1E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreathTests" */;
+			buildPhases = (
+				3608D6B11E523E9100BAAAD3 /* Sources */,
+				3608D6B21E523E9100BAAAD3 /* Frameworks */,
+				3608D6B31E523E9100BAAAD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3608D6B71E523E9100BAAAD3 /* PBXTargetDependency */,
+			);
+			name = DeepBreathTests;
+			productName = DeepBreathTests;
+			productReference = 3608D6B51E523E9100BAAAD3 /* DeepBreathTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3608D6BF1E523E9100BAAAD3 /* DeepBreathUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3608D6CF1E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreathUITests" */;
+			buildPhases = (
+				3608D6BC1E523E9100BAAAD3 /* Sources */,
+				3608D6BD1E523E9100BAAAD3 /* Frameworks */,
+				3608D6BE1E523E9100BAAAD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3608D6C21E523E9100BAAAD3 /* PBXTargetDependency */,
+			);
+			name = DeepBreathUITests;
+			productName = DeepBreathUITests;
+			productReference = 3608D6C01E523E9100BAAAD3 /* DeepBreathUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3608D6991E523E9100BAAAD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Tyler Angert";
+				TargetAttributes = {
+					3608D6A01E523E9100BAAAD3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8TWVWBQE3T;
+						ProvisioningStyle = Automatic;
+					};
+					3608D6B41E523E9100BAAAD3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8TWVWBQE3T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3608D6A01E523E9100BAAAD3;
+					};
+					3608D6BF1E523E9100BAAAD3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8TWVWBQE3T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3608D6A01E523E9100BAAAD3;
+					};
+				};
+			};
+			buildConfigurationList = 3608D69C1E523E9100BAAAD3 /* Build configuration list for PBXProject "DeepBreath" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3608D6981E523E9100BAAAD3;
+			productRefGroup = 3608D6A21E523E9100BAAAD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3608D6A01E523E9100BAAAD3 /* DeepBreath */,
+				3608D6B41E523E9100BAAAD3 /* DeepBreathTests */,
+				3608D6BF1E523E9100BAAAD3 /* DeepBreathUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3608D69F1E523E9100BAAAD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3608D6AF1E523E9100BAAAD3 /* LaunchScreen.storyboard in Resources */,
+				3608D6AC1E523E9100BAAAD3 /* Assets.xcassets in Resources */,
+				3608D6AA1E523E9100BAAAD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3608D6B31E523E9100BAAAD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3608D6BE1E523E9100BAAAD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3608D69D1E523E9100BAAAD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3608D6A71E523E9100BAAAD3 /* ViewController.swift in Sources */,
+				3608D6A51E523E9100BAAAD3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3608D6B11E523E9100BAAAD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3608D6BA1E523E9100BAAAD3 /* DeepBreathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3608D6BC1E523E9100BAAAD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3608D6C51E523E9100BAAAD3 /* DeepBreathUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3608D6B71E523E9100BAAAD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3608D6A01E523E9100BAAAD3 /* DeepBreath */;
+			targetProxy = 3608D6B61E523E9100BAAAD3 /* PBXContainerItemProxy */;
+		};
+		3608D6C21E523E9100BAAAD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3608D6A01E523E9100BAAAD3 /* DeepBreath */;
+			targetProxy = 3608D6C11E523E9100BAAAD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3608D6A81E523E9100BAAAD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3608D6A91E523E9100BAAAD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3608D6AD1E523E9100BAAAD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3608D6AE1E523E9100BAAAD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3608D6C71E523E9100BAAAD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3608D6C81E523E9100BAAAD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3608D6CA1E523E9100BAAAD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8TWVWBQE3T;
+				INFOPLIST_FILE = DeepBreath/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tangert.DeepBreath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3608D6CB1E523E9100BAAAD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8TWVWBQE3T;
+				INFOPLIST_FILE = DeepBreath/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tangert.DeepBreath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3608D6CD1E523E9100BAAAD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8TWVWBQE3T;
+				INFOPLIST_FILE = DeepBreathTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tangert.DeepBreathTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepBreath.app/DeepBreath";
+			};
+			name = Debug;
+		};
+		3608D6CE1E523E9100BAAAD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8TWVWBQE3T;
+				INFOPLIST_FILE = DeepBreathTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tangert.DeepBreathTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepBreath.app/DeepBreath";
+			};
+			name = Release;
+		};
+		3608D6D01E523E9100BAAAD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8TWVWBQE3T;
+				INFOPLIST_FILE = DeepBreathUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tangert.DeepBreathUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DeepBreath;
+			};
+			name = Debug;
+		};
+		3608D6D11E523E9100BAAAD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8TWVWBQE3T;
+				INFOPLIST_FILE = DeepBreathUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tangert.DeepBreathUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DeepBreath;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3608D69C1E523E9100BAAAD3 /* Build configuration list for PBXProject "DeepBreath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3608D6C71E523E9100BAAAD3 /* Debug */,
+				3608D6C81E523E9100BAAAD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3608D6C91E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3608D6CA1E523E9100BAAAD3 /* Debug */,
+				3608D6CB1E523E9100BAAAD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3608D6CC1E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreathTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3608D6CD1E523E9100BAAAD3 /* Debug */,
+				3608D6CE1E523E9100BAAAD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3608D6CF1E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreathUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3608D6D01E523E9100BAAAD3 /* Debug */,
+				3608D6D11E523E9100BAAAD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3608D6991E523E9100BAAAD3 /* Project object */;
+}
