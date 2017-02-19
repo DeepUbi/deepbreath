@@ -514,6 +514,7 @@
 				3608D6CB1E523E9100BAAAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3608D6CC1E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreathTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				3608D6CE1E523E9100BAAAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3608D6CF1E523E9100BAAAD3 /* Build configuration list for PBXNativeTarget "DeepBreathUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				3608D6D11E523E9100BAAAD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

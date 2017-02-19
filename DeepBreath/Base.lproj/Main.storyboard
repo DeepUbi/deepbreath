@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DeepBreath" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +23,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL4-7N-3kG">
+                                <rect key="frame" x="116" y="212" width="141" height="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlV-9x-r3Q">
+                                <rect key="frame" x="117" y="482" width="140" height="140"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="GXd-b3-f2B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2j-gV-zjJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWL-Vb-XcM">
+                                <rect key="frame" x="125" y="273" width="125" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="EeM-Ym-Uep"/>
+                                    <constraint firstAttribute="height" constant="120" id="aCU-3m-jLV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv6-XG-rnf">
+                                <rect key="frame" x="16" y="35" width="45" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN0-6c-Zxf">
+                                <rect key="frame" x="240" y="35" width="119" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="YLd-Jt-TlI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gL4-7N-3kG" firstAttribute="centerX" secondItem="PlV-9x-r3Q" secondAttribute="centerX" id="0ao-ud-2yB"/>
+                            <constraint firstItem="MN0-6c-Zxf" firstAttribute="baseline" secondItem="dv6-XG-rnf" secondAttribute="firstBaseline" id="1LB-1d-b7y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dv6-XG-rnf" secondAttribute="bottom" constant="611" id="34B-mQ-Y3F"/>
+                            <constraint firstItem="VWL-Vb-XcM" firstAttribute="top" secondItem="gL4-7N-3kG" secondAttribute="bottom" constant="26" id="4Jp-bc-60B"/>
+                            <constraint firstItem="dv6-XG-rnf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="6YL-c5-QZa"/>
+                            <constraint firstItem="MN0-6c-Zxf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9al-SM-OZe"/>
+                            <constraint firstItem="VWL-Vb-XcM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DMr-VD-0FB"/>
+                            <constraint firstItem="dv6-XG-rnf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V98-1W-VSG"/>
+                            <constraint firstItem="PlV-9x-r3Q" firstAttribute="top" secondItem="VWL-Vb-XcM" secondAttribute="bottom" constant="89" id="Wb4-IB-tgG"/>
+                            <constraint firstItem="VWL-Vb-XcM" firstAttribute="centerX" secondItem="PlV-9x-r3Q" secondAttribute="centerX" id="XhY-Gc-YYf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PlV-9x-r3Q" secondAttribute="bottom" constant="45" id="ddH-UK-PXX"/>
+                            <constraint firstItem="gL4-7N-3kG" firstAttribute="trailing" secondItem="PlV-9x-r3Q" secondAttribute="trailing" id="hnn-d6-uGe"/>
+                            <constraint firstItem="PlV-9x-r3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ved-hP-Leu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameTimeLabel" destination="dv6-XG-rnf" id="fG9-1Q-3k5"/>
+                        <outlet property="highScoreLabel" destination="MN0-6c-Zxf" id="Wax-YI-6Pn"/>
+                        <outlet property="maCountLabel" destination="gL4-7N-3kG" id="Y5I-5b-YrC"/>
+                        <outlet property="maLabel" destination="VWL-Vb-XcM" id="Mnd-5G-IyY"/>
+                        <outlet property="startButton" destination="PlV-9x-r3Q" id="PKe-Iu-607"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
