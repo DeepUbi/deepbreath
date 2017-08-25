@@ -9,16 +9,43 @@
 import UIKit
 import Speech
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController, StartGameDelegate {
 
-    @IBOutlet weak var maCountLabel: UILabel!
-    @IBOutlet weak var maLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    //MARK: IBOutlets
+    @IBOutlet weak var maCountLabel: UILabel! {
+        didSet {
+            maCountLabel.text = "Score: \(counter)"
+        }
+    }
+    
+    @IBOutlet weak var maLabel: UILabel! {
+        didSet {
+            maLabel.clipsToBounds = true
+            maLabel.layer.cornerRadius = maLabel.frame.width/2
+        }
+    }
+    
+    @IBOutlet weak var startButton: UIButton! {
+        didSet {
+            startButton.layer.cornerRadius = startButton.frame.width/2
+            startButton.layer.borderColor = UIColor.darkGray.cgColor
+            startButton.layer.borderWidth = 2
+        }
+    }
+    
+    @IBOutlet weak var resetButton: UIButton! {
+        didSet {
+            resetButton.layer.cornerRadius = resetButton.frame.width/2
+            resetButton.layer.borderColor = UIColor.darkGray.cgColor
+            resetButton.layer.borderWidth = 2
+        }
+    }
+    
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var gameTimeLabel: UILabel!
     
     var audioEngine = AVAudioEngine()
-    let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "zh"))!
+    var speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "zh"))!
     var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     var recognitionTask: SFSpeechRecognitionTask?
     
@@ -29,41 +56,40 @@ class ViewController: UIViewController {
     var gameTime: Int = 0
     var timer: Timer?
     
+    //Data collection
+    let sharedData = DataManager.sharedInstance
+    
+    //For start button
+    var isPressed = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        startButton.layer.cornerRadius = startButton.frame.width/2
-        startButton.layer.borderColor = UIColor.darkGray.cgColor
-        startButton.layer.borderWidth = 2
         
-        maLabel.clipsToBounds = true
-        maLabel.layer.cornerRadius = 10
-        maCountLabel.text = "Score: \(counter)"
+        //Initialize data manager
+        let _ = DataManager()
+        
+        //delegate
+        PopupViewController.delegate = self
     }
     
-    var isPressed = false
+    @IBAction func sendData(_ sender: Any) {
+        if sharedData.dataDictionary.count == 0 {
+            print("whoops need some data")
+        }
+    }
+    
     @IBAction func pressStart(_ sender: Any) {
-        if (isPressed == false) {
-            print("Started")
-            gameTime = 0
-            gameTimeLabel.text = "Time: \(gameTime)"
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
-            startButton.setTitle("Stop", for: .normal)
-            startButton.layer.borderColor = UIColor.darkGray.cgColor
-            startButton.layer.borderWidth = 2
-            
-            UIView.animate(withDuration: 0.2, animations: {
-                self.startButton.backgroundColor = UIColor.darkGray
-                self.startButton.setTitleColor(UIColor.white, for: .normal)
-            })
+        if !isPressed {
 
-            //reset counter
-            counter = 0
-            maCountLabel.text = "Score: \(counter)"
+            //presents the popover controller
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popupVC") as! PopupViewController
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMove(toParentViewController: self)
             
-            startButton.setTitle("Stop", for: .normal)
-            beginRecognition()
             isPressed = true
+            
         } else {
             print("Stopped")
             self.timer?.invalidate()
@@ -76,12 +102,78 @@ class ViewController: UIViewController {
                 self.startButton.setTitleColor(UIColor.darkGray, for: .normal)
             })
             
-            //this compensates for the extra 3 API calls (apple's problem)
+            if counter != 0 {
+                //Appending data
+                sharedData.previousScores.append(counter)
+                sharedData.timeStamps.append(getTimeStamp())
+                sharedData.dataDictionary[getTimeStamp()] = counter
+            }
+            
+            //this compensates for the extra 3 API calls (Apple's problem...)
             counter-=3
             audioEngine.stop()
             recognitionRequest?.endAudio()
             isPressed = false
         }
+        
+            
+    }
+    
+    //Called after the intro is finished
+    func didFinishIntro() {
+            gameTime = 0
+            gameTimeLabel.text = "Time: \(gameTime)"
+            
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target:self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
+            startButton.setTitle("Stop", for: .normal)
+            startButton.layer.borderColor = UIColor.darkGray.cgColor
+            startButton.layer.borderWidth = 2
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.startButton.backgroundColor = UIColor.darkGray
+                self.startButton.setTitleColor(UIColor.white, for: .normal)
+            })
+            
+            //reset counter
+            counter = 0
+            maCountLabel.text = "Score: \(counter)"
+            
+            startButton.setTitle("Stop", for: .normal)
+            beginRecognition()
+    }
+    
+    
+    @IBAction func pressReset(_ sender: Any) {
+            print("Stopped")
+            self.timer?.invalidate()
+            startButton.setTitle("Start", for: .normal)
+            startButton.layer.borderColor = UIColor.darkGray.cgColor
+            startButton.layer.borderWidth = 2
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.startButton.backgroundColor = UIColor.clear
+                self.startButton.setTitleColor(UIColor.darkGray, for: .normal)
+            })
+            
+            audioEngine.stop()
+            recognitionRequest?.endAudio()
+            isPressed = false
+        
+            resetCounter()
+    }
+    
+    //helper functions
+    func getTimeStamp() -> Date {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy, h:mm a"
+        
+        return date
+    }
+    
+    func resetCounter() {
+        self.counter = 0
+        self.maCountLabel.text = "Score: \(counter)"
     }
     
     func updateCounter() {
@@ -124,12 +216,12 @@ class ViewController: UIViewController {
                 isFinal = (result?.isFinal)!
                 let speech = result?.bestTranscription.segments.last?.substring
                 let word = speech?.characters.last!
-                print("Word: \(word!)")
                 
                 //if the speech is "ma"
                 if(self.maArray.contains("\(word!)")){
-                    print("got it!")
                     self.counter+=1
+                    print("\(word)ma is there!")
+                    
                     if self.counter >= self.highScore {
                         self.highScore = self.counter
                         self.highScoreLabel.text = "High score: \(self.highScore)"

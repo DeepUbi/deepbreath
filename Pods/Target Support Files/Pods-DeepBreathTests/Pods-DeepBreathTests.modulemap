@@ -1,0 +1,6 @@
+framework module Pods_DeepBreathTests {
+  umbrella header "Pods-DeepBreathTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

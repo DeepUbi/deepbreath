@@ -1,0 +1,6 @@
+framework module Pods_DeepBreath {
+  umbrella header "Pods-DeepBreath-umbrella.h"
+
+  export *
+  module * { export * }
+}
